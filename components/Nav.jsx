@@ -39,6 +39,7 @@ const Nav = () => {
         {links.map((link,index)=>{
             return( 
             <Link 
+            prefetch={true}
             href={link.path} 
             key={link.name} 
             className={`capitalize font-medium transition-all ${link.path === pathname ? 'text-accent border-b-2 border-accent' : ''} hover:text-accent hover:border-b-2 hover:border-accent`}

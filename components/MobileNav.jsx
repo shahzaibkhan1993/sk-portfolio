@@ -39,7 +39,7 @@ const pathname = usePathname();
       <SheetContent className="flex flex-col" >
         {/* logo */}
         <div className="mt-32 mb-40 text-center text-2xl">
-          <Link href="/">
+          <Link href="/" prefetch={true}>
           <h1 className="text-4xl font-semibold">SHAHZEB KHAN<span className="text-accent" >.</span></h1>
           </Link>
           
@@ -47,7 +47,7 @@ const pathname = usePathname();
         {/* nav */}
         <nav className="flex flex-col justify-center items-center gap-8">
           {links.map((link,index)=>{
-            return <Link href={link.path}key={index} className={`text-xl capitalize  transition-all ${link.path === pathname ? 'text-accent border-b-2 border-accent' : ''} hover:text-accent hover:border-b-2 hover:border-accent`}>{link.name}</Link>
+            return <Link prefetch={true} href={link.path}key={index} className={`text-xl capitalize  transition-all ${link.path === pathname ? 'text-accent border-b-2 border-accent' : ''} hover:text-accent hover:border-b-2 hover:border-accent`}>{link.name}</Link>
           })}
         </nav>
       </SheetContent>

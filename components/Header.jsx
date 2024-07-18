@@ -20,7 +20,7 @@ const Header = () => {
         
         <div className="container mx-auto flex justify-between items-center">
             {/* logo text */}
-            <Link href="/" >
+            <Link href="/" prefetch={true}>
             
             <h1  className="text-5xl font-semibold"> 
             SK<span className="text-accent">.</span>            

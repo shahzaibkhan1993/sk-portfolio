@@ -9,7 +9,7 @@ const socials=[
 const Social = ({containterStyles,iconStyles}) => {
   return <div className={containterStyles}>
     {socials.map((item,index)=>{
-        return <Link key={index} href={item.path} className={iconStyles} target="_blank">
+        return <Link prefetch={true} key={index} href={item.path} className={iconStyles} target="_blank">
             {item.icon}
         </Link>
     })}
