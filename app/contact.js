@@ -14,7 +14,7 @@ const contactHandler = async (req, res) => {
       },
     });
 
-    const mailOptions = {
+    const mailOptions = await transporter.sendMail({
       from: email,
       to: process.env.EMAIL_TO, // The email address where you want to receive the messages
       subject: `Contact form submission from ${firstname} ${lastname}`,
@@ -25,7 +25,7 @@ const contactHandler = async (req, res) => {
         Service: ${service}
         Message: ${message}
       `,
-    };
+    });
 
     try {
       await transporter.sendMail(mailOptions);

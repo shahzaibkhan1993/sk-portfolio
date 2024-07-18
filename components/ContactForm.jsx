@@ -47,7 +47,7 @@ const ContactForm = ({ isDialogOpen, onClose }) => {
         message: ''
       });
     } else {
-      toast.error('Failed to send message');
+      toast.error('Failed to send message contact direct on Shahzaib201411@gmail.com');
     }
   };
 

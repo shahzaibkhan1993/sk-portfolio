@@ -21,8 +21,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`bg-primary bg-cover bg-no-repeat ${jetbrainsMono.variable}`}>
-        <TopLeftImage />
-        
+      
+      <TopLeftImage />
+      
+      
+
         <Header />
         
         <StairTransition />
