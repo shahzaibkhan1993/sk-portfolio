@@ -94,7 +94,7 @@ const Services = () => {
                 {/* title */}
                 <h2 className="flex justify-center items-center text-wrap text-[28px] font-bold leading-snug text-white group-hover:text-accent transition-all duration-500">{service.title}</h2>
                 {/* description */}
-                <p className=" text-white/60 text-justify text-wrap">{service.description}</p>
+                <p className=" text-white/60 text-justify text-wrap md:text-wrap">{service.description}</p>
                 </div>
 
                 

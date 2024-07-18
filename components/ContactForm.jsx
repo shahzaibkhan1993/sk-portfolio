@@ -83,8 +83,8 @@ const ContactForm = ({ isDialogOpen, onClose }) => {
               </div>
             )}
 
-            <h3 className="text-4xl text-accent">Let's work together</h3>
-            <p className="text-white/60">Have a project in mind that needs a skilled and passionate developer? I'm eager to collaborate and bring your ideas to life! With a strong foundation in various technologies and a dedication to user-centric solutions, I'm confident we can create something truly impactful. Feel free to reach out and let's discuss how I can help make your vision a reality.</p>
+            <h3 className="text-4xl text-accent">Let&apos;s work together</h3>
+            <p className="text-white/60">Have a project in mind that needs a skilled and passionate developer? I&apos;m eager to collaborate and bring your ideas to life! With a strong foundation in various technologies and a dedication to user-centric solutions, I&apos;m confident we can create something truly impactful. Feel free to reach out and let&apos;s discuss how I can help make your vision a reality.</p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Input type="text" name="firstname" value={formData.firstname} onChange={handleChange} placeholder="Firstname" required />
