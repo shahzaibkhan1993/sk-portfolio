@@ -39,7 +39,7 @@ const Home = () => {
           
           {/* button & socials */}
           <div className="flex flex-col xl:flex-row items-center gap-8 ">
-            <Link href={"/assets/shahzebkhanResume.pdf"} target="_blank">
+            <Link href={"/shahzebkhanResume.pdf"} target="_blank">
             <Button variant="outline" size="lg" className="uppercase flex items-center gap-2">
               <span>Download CV</span>
               <FiDownload className="text-xl"/>
