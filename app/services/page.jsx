@@ -69,17 +69,17 @@ const services=[
 const Services = () => {
   return (
     <section className="min-h-[80vh]  flex flex-col justify-center py-12 xl:py-0">
-      <div className="container mx-auto overflow-x-scroll whitespace-nowrap custom-scrollbar">
+      <div className="container  mx-auto overflow-x-auto overflow-y-auto xl:overflow-x-auto xl:overflow-y-auto whitespace-nowrap custom-scrollbar">
         <motion.div
           initial={{ x: '100%' }}
           animate={{ x: '0%', transition: { duration: 3, ease: "easeInOut" } }}
-          className="flex space-x-12"
+          className="flex flex-col xl:flex-row space-x-0 xl:space-x-4 xl:space-y-0  items-center "
         >
           {services.map((service, index) => {
             return (
-              <div key={index} className=' flex-shrink-0 w-[300px]  md:w-[500px] flex flex-col justify-center gap-6 group min-h-[400px]'>
+              <div key={index} className='flex-shrink-0 w-[300px]  border-b-2 border-white/20  md:w-[500px] md:h-fit  flex-6 flex-col justify-center gap-6 group '>
                
-                <div className='h-[600px] py-5 '>
+                <div className='md:h-full p-3 xl:h-[600px]  py-5 '>
                   {/* top */}
                 <div className=" w-full flex justify-between items-center">
                   <div className=" text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">{service.num}</div>
@@ -91,19 +91,18 @@ const Services = () => {
                 <div className="text-[44px] group-hover:text-accent transition-all duration-300">
                 <span className='flex justify-center items-center py-2 '>{service.icon}</span>
                 </div>
+                <div className="flex justify-center items-center">
                 {/* title */}
-                <h2 className="flex justify-center items-center text-wrap text-[28px] font-bold leading-snug text-white group-hover:text-accent transition-all duration-500">{service.title}</h2>
+                <h2 className=" text-center text-wrap  text-[28px] font-bold leading-snug text-white group-hover:text-accent transition-all duration-500">{service.title}</h2>
+                </div>
+                <div className="flex justify-center items-center">
                 {/* description */}
-                <p className=" text-white/60 text-justify text-wrap md:text-wrap">{service.description}</p>
+                <p className=" text-white/60 text-justify text-wrap break-words">{service.description}</p>
+                </div>
+                
+                
                 </div>
 
-                
-                
-                
-               
-                
-                {/* border */}
-                <hr className="border-b border-white/20 w-full -top-60" />
                 
                 
                 

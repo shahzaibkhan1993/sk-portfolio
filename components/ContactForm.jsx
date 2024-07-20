@@ -1,12 +1,16 @@
-"use client";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { toast, Toaster } from 'react-hot-toast';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
+import emailjs from 'emailjs-com';
 
 const ContactForm = ({ isDialogOpen, onClose }) => {
+  const emailjs_serviceID='service_lobarss';
+  const emailjs_templateID='template_liiu9zs';
+  const emailjs_publicKey='7qcAT2KbVqC-u6vGN';
+
   const [formData, setFormData] = useState({
     firstname: '',
     lastname: '',
@@ -15,6 +19,12 @@ const ContactForm = ({ isDialogOpen, onClose }) => {
     service: '',
     message: ''
   });
+
+  useEffect(() => {
+    console.log('EmailJS Service ID:', emailjs_serviceID);
+    console.log('EmailJS Template ID:', emailjs_templateID);
+    console.log('EmailJS User ID:', emailjs_publicKey);
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -28,15 +38,26 @@ const ContactForm = ({ isDialogOpen, onClose }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch('/contact', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    });
+    try {
+      const templateParams = {
+        firstname: formData.firstname,
+        lastname: formData.lastname,
+        email: formData.email,
+        phone: formData.phone,
+        service: formData.service,
+        message: formData.message,
+      };
 
-    if (res.ok) {
+      console.log('Sending email with the following parameters:', templateParams);
+
+      const response = await emailjs.send(
+        emailjs_serviceID,
+        emailjs_templateID,
+        templateParams,
+        emailjs_publicKey
+      );
+
+      console.log('EmailJS response:', response);
       toast.success('Message sent successfully');
       setFormData({
         firstname: '',
@@ -46,8 +67,9 @@ const ContactForm = ({ isDialogOpen, onClose }) => {
         service: '',
         message: ''
       });
-    } else {
-      toast.error('Failed to send message contact direct on Shahzaib201411@gmail.com');
+    } catch (error) {
+      console.error('Failed to send message:', error);
+      toast.error(`Failed to send message. ${error.text}`);
     }
   };
 
