@@ -44,7 +44,7 @@ const MobileNav = () => {
       </SheetTrigger>
       <SheetContent className="flex flex-col">
         {/* logo */}
-        <div className="mt-32 mb-40 text-center text-2xl">
+        <div className="mt-32 mb-0 text-center text-2xl">
           <Link href="/" prefetch={true}>
             <h1 className="text-4xl font-semibold">
               SHAHZEB KHAN<span className="text-accent">.</span>
@@ -52,7 +52,7 @@ const MobileNav = () => {
           </Link>
         </div>
         {/* nav */}
-        <nav className="flex flex-col justify-center items-center gap-8">
+        <nav className="flex flex-col justify-center items-center gap-8 mt-20">
           {links.map((link, index) => (
             <Link
               key={index}

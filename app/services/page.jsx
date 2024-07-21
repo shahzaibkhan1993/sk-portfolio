@@ -79,7 +79,7 @@ const Services = () => {
             return (
               <div
                 key={index}
-                className={`bg-[rgba(65,47,123,0.15)] drop-shadow-2xl hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300 hover:shadow-xl hover:shadow-black rounded-xl flex-shrink-0 w-full xl:h-[650px] md:w-[500px] xl:p-4 md:h-full  flex-col justify-center gap-12 group`}
+                className={`bg-[rgba(65,47,123,0.15)] drop-shadow-2xl hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300 hover:shadow-xl hover:shadow-black rounded-xl flex-shrink-0 w-full xl:h-[650px] sm:w-[300px] sm:text-wrap  md:w-[500px] xl:p-4 p-4 md:h-full  flex-col justify-center gap-12 group flex-wrap sm:flex-wrap md:flex-wrap`}
               >
                 {/* top */}
                 <div className=" w-full flex justify-between items-center">
@@ -94,15 +94,15 @@ const Services = () => {
                 <div className="text-[44px] group-hover:text-accent transition-all duration-300">
                   <span className="flex justify-center items-center py-2">{service.icon}</span>
                 </div>
-                <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center flex-wrap sm:text-wrap sm:flex-wrap">
                   {/* title */}
-                  <h2 className="text-center text-wrap text-[20px] font-bold leading-snug text-white group-hover:text-accent transition-all duration-500">
+                  <h2 className="text-center text-wrap text-[20px] font-bold leading-snug text-white group-hover:text-accent transition-all duration-500 sm:text-wrap">
                     {service.title}
                   </h2>
                 </div>
-                <div className="flex justify-center items-center text-wrap flex-wrap sm:text-wrap">
+                <div className="flex justify-center items-center text-wrap flex-wrap sm:text-wrap sm:flex-wrap">
                   {/* description */}
-                  <p className="text-white/60 text-justify text-wrap break-words">
+                  <p className="text-white/60 text-justify text-wrap break-words sm:text-wrap">
                     {service.description}
                   </p>
                 </div>
