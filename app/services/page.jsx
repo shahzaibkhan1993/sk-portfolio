@@ -57,7 +57,7 @@ const services=[
   {
     num:'07',
     title:'Software Documentation & Technical Writing',
-    description:"Skilled technical writer with experience crafting clear and concise software documentation. Adept at tailoring documentation to various audiences, from developers to end-users. Proven ability to explain complex technical concepts in an easy-to-understand manner. Utilize industry best practices and tools to create informative and user-friendly documentation.",
+    description:"Skilled technical writer with experience crafting clear and concise software documentation. Adept at tailoring documentation to various audiences, from developers to end-users. Proven ability to explain complex technical concepts in an easy-to-understand manner. Utilize industry best practices and tools to create informative and user-friendly documentation. Proficient in creating comprehensive visual aids, including class diagrams, flowcharts, sequence diagrams, and use case diagrams, to enhance the clarity and effectiveness of documentation.",
     href:"/work",
     icon:<MdEditDocument  />
   },
