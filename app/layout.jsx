@@ -1,4 +1,4 @@
-
+h
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 //components
@@ -24,6 +24,7 @@ export default function RootLayout({ children }) {
       
       <TopLeftImage />
         <Header />
+      
         <StairTransition />
         <PageTransition>   
              

@@ -27,7 +27,7 @@ const Home = () => {
         
           {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none bg-gradient-to-r from-primary/10 via-black/30">
-            <span className="h2">Modern <span className="text-accent">Full Stack</span> Developer</span>
+            <span className="h2">Modern <span className="text-accent ">Full Stack</span> Developer</span>
            
             <motion.h1 variants={fadeIn('down',0.4)}
             initial="hidden" animate='show' exit='hidden' className="h1"

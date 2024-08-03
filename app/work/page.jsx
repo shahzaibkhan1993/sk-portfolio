@@ -13,31 +13,34 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects=[
   {
     num:"01",
-    category:"frontend",
-    title:"project 1",
-    description:" ",
+    category:"Fullstack",
+    title:"ZK Tech Store",
+    description:"ZK Tech Store project is an Inventory Management System designed to manage IT assets. It includes features such as inventory tracking, user management, reports and analytics, asset management, maintenance schedules, and device status reporting",
     stack:[
-      { name:"html 5" },
-      { name:"css" },
-      { name:"javascript" }      
+      { name:"ASP .NET Core" },
+      { name:"Angular" },
+      { name:"SQL Server" }      
     ],
-    image:"/assets/work/thumb1.png",
-    live:"",
-    github:""
+    image:"/assets/work/thumb1.gif",
+    live:"https://github.com/shahzaibkhan1993/IMS-Zk-tech-store",
+    github:"https://github.com/shahzaibkhan1993/IMS-Zk-tech-store"
   },
   {
     num:"02",
-    category:"fullstack",
-    title:"project 2",
-    description:" ",
+    category:"Fullstack",
+    title:"Care Pulse",
+    description:"healthcare platform that streamlines patient registration, appointment scheduling, and medical records, and learn to implement complex forms and SMS notifications.",
     stack:[
       { name:"Next.js" },
       { name:"Tailwind.css" },
-      { name:"Node.js" }      
+      { name:"Node.js" },
+      { name:"Typescript" },
+      { name:"Appwrite" },
+      { name:"Twilio" }            
     ],
-    image:"/assets/work/thumb2.png",
-    live:"",
-    github:""
+    image:"/assets/work/thumb2.gif",
+    live:"https://careplus-appointment-system.vercel.app/",
+    github:"https://github.com/shahroze911/careplus-appointment-system"
   },
   {
     num:"03",
@@ -75,7 +78,9 @@ const Work = () => {
               {/* outline num */}
               <div className="text-8xl leading-none font-extrabold text-transparent text-outline">{project.num}</div>
               {/* project category */}
-              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">{project.category} project</h2>
+              <h2 className="text-[42px] font-bold leading-none text-white  capitalize">{project.category} project</h2>
+              {/* project title */}
+              <h3 className="text-[32px] font-bold leading-none text-white hover:text-accent transition-all duration-500 capitalize">{project.title} </h3>
               {/* project description */}
               <p className="text-white/60">{project.description}</p>
               {/* stack */}
